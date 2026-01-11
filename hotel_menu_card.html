@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Menu</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .menu-container {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+            padding: 40px;
+            border-top: 5px solid #ff6b35;
+        }
+
+        .menu-header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 2px solid #ff6b35;
+            padding-bottom: 20px;
+        }
+
+        .hotel-name {
+            font-size: 32px;
+            color: #333;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .menu-title {
+            font-size: 18px;
+            color: #666;
+        }
+
+        .menu-section {
+            margin-bottom: 35px;
+        }
+
+        .section-title {
+            font-size: 22px;
+            color: #ff6b35;
+            margin-bottom: 20px;
+            border-bottom: 1px dashed #ddd;
+            padding-bottom: 10px;
+        }
+
+        .menu-item {
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px dotted #eee;
+        }
+
+        .menu-item:last-child {
+            border-bottom: none;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 8px;
+        }
+
+        .item-name {
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .item-price {
+            font-size: 16px;
+            color: #ff6b35;
+            font-weight: bold;
+        }
+
+        .item-description {
+            font-size: 14px;
+            color: #777;
+            margin-top: 5px;
+        }
+
+        .menu-footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #ff6b35;
+            color: #666;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-container">
+        <div class="menu-header">
+            <div class="hotel-name">🏨 The Pista House</div>
+            <div class="menu-title">Food Menu</div>
+        </div>
+
+        <div class="menu-section">
+            <div class="section-title">Starters</div>
+            
+            <div class="menu-item">
+                <div class="item-header">
+                    <span class="item-name">Samosa</span>
+                    <span class="item-price">₹40</span>
+                </div>
+                <div class="item-description">Crispy pastry filled with spiced potato and peas</div>
+            </div>
+
+            <div class="menu-item">
+                <div class="item-header">
+                    <span class="item-name">Papad</span>
+                    <span class="item-price">₹20</span>
+                </div>
+                <div class="item-description">Crispy fried lentil wafer</div>
+            </div>
+        </div>
+
+        <div class="menu-section">
+            <div class="section-title">Main Course</div>
+            
+            <div class="menu-item">
+                <div class="item-header">
+                    <span class="item-name">Biryani</span>
+                    <span class="item-price">₹250</span>
+                </div>
+                <div class="item-description">Fragrant rice cooked with meat and spices</div>
+            </div>
+
+            <div class="menu-item">
+                <div class="item-header">
+                    <span class="item-name">Paneer Masala</span>
+                    <span class="item-price">₹180</span>
+                </div>
+                <div class="item-description">Soft cottage cheese in spiced onion sauce</div>
+            </div>
+
+            <div class="menu-item">
+                <div class="item-header">
+                    <span class="item-name">Dal and Rice</span>
+                    <span class="item-price">₹120</span>
+                </div>
+                <div class="item-description">Home style lentils with plain white rice</div>
+            </div>
+
+            <div class="menu-item">
+                <div class="item-header">
+                    <span class="item-name">Chole Bhature</span>
+                    <span class="item-price">₹150</span>
+                </div>
+                <div class="item-description">Fried bread served with spiced chickpeas</div>
+            </div>
+        </div>
+
+        <div class="menu-section">
+            <div class="section-title">Breads and Rice</div>
+            
+            <div class="menu-item">
+                <div class="item-header">
+                    <span class="item-name">Butter Roti</span>
+                    <span class="item-price">₹30</span>
+                </div>
+                <div class="item-description">Warm soft flatbread with butter</div>
+            </div>
+
+            <div class="menu-item">
+                <div class="item-header">
+                    <span class="item-name">Onion Paratha</span>
+                    <span class="item-price">₹50</span>
+                </div>
+                <div class="item-description">Stuffed flatbread fried with butter</div>
+            </div>
+        </div>
+
+        <div class="menu-section">
+            <div class="section-title">Desserts</div>
+            
+            <div class="menu-item">
+                <div class="item-header">
+                    <span class="item-name">Kheer</span>
+                    <span class="item-price">₹60</span>
+                </div>
+                <div class="item-description">Sweet rice pudding made with milk</div>
+            </div>
+
+            <div class="menu-item">
+                <div class="item-header">
+                    <span class="item-name">Gulab Jamun</span>
+                    <span class="item-price">₹50</span>
+                </div>
+                <div class="item-description">Fried dough balls soaked in sweet syrup</div>
+            </div>
+
+            <div class="menu-item">
+                <div class="item-header">
+                    <span class="item-name">Lassi</span>
+                    <span class="item-price">₹40</span>
+                </div>
+                <div class="item-description">Cool yogurt drink</div>
+            </div>
+        </div>
+
+        <div class="menu-footer">
+            <p>Thank you for dining with us!</p>
+            <p>Please ask our staff if you have any questions.</p>
+        </div>
+    </div>
+</body>
+</html>
