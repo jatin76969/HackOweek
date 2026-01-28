@@ -1,0 +1,342 @@
+<html>
+    <title>Student Sports Registration</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+            width: 100%;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 28px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 5px;
+            font-size: 14px;
+            transition: border-color 0.3s;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="tel"]:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .sports-section {
+            margin-bottom: 25px;
+        }
+
+        .sports-section h3 {
+            color: #333;
+            font-size: 16px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .sports-buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .sport-btn {
+            padding: 12px 16px;
+            border: 2px solid #e0e0e0;
+            background: white;
+            color: #333;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .sport-btn:hover {
+            border-color: #667eea;
+            background: #f5f5f5;
+        }
+
+        .sport-btn.selected {
+            background: #667eea;
+            color: white;
+            border-color: #667eea;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 14px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: #5568d3;
+        }
+
+        .form {
+            display: block;
+        }
+
+        .form.hidden {
+            display: none;
+        }
+
+        .thank-you {
+            display: none;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .thank-you.show {
+            display: block;
+        }
+
+        .thank-you h2 {
+            color: #667eea;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .thank-you p {
+            color: #666;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .thank-you .details {
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: left;
+            color: #333;
+        }
+
+        .thank-you .details p {
+            margin-bottom: 10px;
+        }
+
+        .reset-btn {
+            margin-top: 20px;
+            padding: 12px 30px;
+            background: #764ba2;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .reset-btn:hover {
+            background: #653a8a;
+        }
+
+        .alert-box {
+            display: none;
+            background: #4caf50;
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 600;
+            animation: slideDown 0.5s ease;
+        }
+
+        .alert-box.show {
+            display: block;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="alert-box" id="alertBox">✓ Thank You for Registration!</div>
+        <form class="form" id="registrationForm">
+            <h1>Student Sports Registration</h1>
+
+            <!-- Name Entry -->
+            <div class="form-group">
+                <label for="name">Full Name *</label>
+                <input type="text" id="name" name="name" required placeholder="Enter your full name">
+            </div>
+
+            <!-- Phone and Email -->
+            <div class="form-group">
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Gmail *</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email address">
+            </div>
+
+            <!-- Sports Selection -->
+            <div class="sports-section">
+                <h3>Sports You're Interested To Play *</h3>
+                <div class="sports-buttons">
+                    <button type="button" class="sport-btn" data-sport="Football">Football</button>
+                    <button type="button" class="sport-btn" data-sport="Cricket">Cricket</button>
+                    <button type="button" class="sport-btn" data-sport="Volleyball">Volleyball</button>
+                    <button type="button" class="sport-btn" data-sport="Basketball">Basketball</button>
+                    <button type="button" class="sport-btn" data-sport="Tennis">Tennis</button>
+                    <button type="button" class="sport-btn" data-sport="Badminton">Badminton</button>
+                </div>
+                <input type="hidden" id="selectedSport" name="sport" required>
+            </div>
+
+            <!-- Achievements -->
+            <div class="form-group">
+                <label for="achievements">Any Previous Achievements</label>
+                <textarea id="achievements" name="achievements" placeholder="Share your previous sports achievements..."></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="submit-btn">Register</button>
+        </form>
+
+        <!-- Thank You Message -->
+        <div class="thank-you" id="thankYouSection">
+            <h2>Thank You for Registration!</h2>
+            <p>Your registration has been successfully submitted.</p>
+            <div class="details">
+                <p><strong>Name:</strong> <span id="displayName"></span></p>
+                <p><strong>Email:</strong> <span id="displayEmail"></span></p>
+                <p><strong>Phone:</strong> <span id="displayPhone"></span></p>
+                <p><strong>Sport Selected:</strong> <span id="displaySport"></span></p>
+                <p><strong>Achievements:</strong> <span id="displayAchievements"></span></p>
+            </div>
+            <button class="reset-btn" onclick="resetForm()">Register Another Student</button>
+        </div>
+    </div>
+
+    <script>
+        const sportButtons = document.querySelectorAll('.sport-btn');
+        const selectedSportInput = document.getElementById('selectedSport');
+        let selectedSport = '';
+
+        // Sport button selection
+        sportButtons.forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                sportButtons.forEach(btn => btn.classList.remove('selected'));
+                this.classList.add('selected');
+                selectedSport = this.dataset.sport;
+                selectedSportInput.value = selectedSport;
+            });
+        });
+
+        // Form submission
+        document.getElementById('registrationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            if (!selectedSport) {
+                alert('Please select a sport!');
+                return;
+            }
+
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const achievements = document.getElementById('achievements').value || 'None';
+
+            // Display thank you message
+            document.getElementById('displayName').textContent = name;
+            document.getElementById('displayEmail').textContent = email;
+            document.getElementById('displayPhone').textContent = phone;
+            document.getElementById('displaySport').textContent = selectedSport;
+            document.getElementById('displayAchievements').textContent = achievements;
+
+            // Hide form and show thank you
+            document.getElementById('registrationForm').classList.add('hidden');
+            document.getElementById('thankYouSection').classList.add('show');
+
+            // Show alert box
+            const alertBox = document.getElementById('alertBox');
+            alertBox.classList.add('show');
+            setTimeout(() => {
+                alertBox.classList.remove('show');
+            }, 3000);
+        });
+
+        // Reset form
+        function resetForm() {
+            document.getElementById('registrationForm').reset();
+            document.getElementById('registrationForm').classList.remove('hidden');
+            document.getElementById('thankYouSection').classList.remove('show');
+            sportButtons.forEach(btn => btn.classList.remove('selected'));
+            selectedSport = '';
+            selectedSportInput.value = '';
+        }
+    </script>
+</body>
+</html>
