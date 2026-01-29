@@ -222,13 +222,13 @@
         <form class="form" id="registrationForm">
             <h1>Student Sports Registration</h1>
 
-            <!-- Name Entry -->
+            
             <div class="form-group">
                 <label for="name">Full Name *</label>
                 <input type="text" id="name" name="name" required placeholder="Enter your full name">
             </div>
 
-            <!-- Phone and Email -->
+            
             <div class="form-group">
                 <label for="phone">Phone Number *</label>
                 <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
@@ -239,7 +239,7 @@
                 <input type="email" id="email" name="email" required placeholder="Enter your email address">
             </div>
 
-            <!-- Sports Selection -->
+            
             <div class="sports-section">
                 <h3>Sports You're Interested To Play *</h3>
                 <div class="sports-buttons">
@@ -253,17 +253,17 @@
                 <input type="hidden" id="selectedSport" name="sport" required>
             </div>
 
-            <!-- Achievements -->
+            
             <div class="form-group">
                 <label for="achievements">Any Previous Achievements</label>
                 <textarea id="achievements" name="achievements" placeholder="Share your previous sports achievements..."></textarea>
             </div>
 
-            <!-- Submit Button -->
+            
             <button type="submit" class="submit-btn">Register</button>
         </form>
 
-        <!-- Thank You Message -->
+        
         <div class="thank-you" id="thankYouSection">
             <h2>Thank You for Registration!</h2>
             <p>Your registration has been successfully submitted.</p>
@@ -283,7 +283,7 @@
         const selectedSportInput = document.getElementById('selectedSport');
         let selectedSport = '';
 
-        // Sport button selection
+        
         sportButtons.forEach(button => {
             button.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -294,7 +294,7 @@
             });
         });
 
-        // Form submission
+        
         document.getElementById('registrationForm').addEventListener('submit', function(e) {
             e.preventDefault();
 
@@ -303,24 +303,24 @@
                 return;
             }
 
-            // Get form values
+            
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
             const phone = document.getElementById('phone').value;
             const achievements = document.getElementById('achievements').value || 'None';
 
-            // Display thank you message
+            
             document.getElementById('displayName').textContent = name;
             document.getElementById('displayEmail').textContent = email;
             document.getElementById('displayPhone').textContent = phone;
             document.getElementById('displaySport').textContent = selectedSport;
             document.getElementById('displayAchievements').textContent = achievements;
 
-            // Hide form and show thank you
+        
             document.getElementById('registrationForm').classList.add('hidden');
             document.getElementById('thankYouSection').classList.add('show');
 
-            // Show alert box
+            
             const alertBox = document.getElementById('alertBox');
             alertBox.classList.add('show');
             setTimeout(() => {
@@ -328,7 +328,6 @@
             }, 3000);
         });
 
-        // Reset form
         function resetForm() {
             document.getElementById('registrationForm').reset();
             document.getElementById('registrationForm').classList.remove('hidden');
