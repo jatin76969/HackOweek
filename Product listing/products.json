@@ -1,0 +1,202 @@
+[
+  {
+    "id": 1,
+    "name": "Wireless Bluetooth Headphones",
+    "category": "Electronics",
+    "price": 2499,
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&q=80",
+    "inStock": true,
+    "description": "High-quality wireless headphones with noise cancellation."
+  },
+  {
+    "id": 2,
+    "name": "Smart Watch Series 5",
+    "category": "Electronics",
+    "price": 4999,
+    "rating": 4.2,
+    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&q=80",
+    "inStock": true,
+    "description": "Track your fitness and stay connected with this smart watch."
+  },
+  {
+    "id": 3,
+    "name": "Men's Casual T-Shirt",
+    "category": "Clothing",
+    "price": 499,
+    "rating": 3.8,
+    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500&q=80",
+    "inStock": true,
+    "description": "Comfortable cotton t-shirt for everyday wear."
+  },
+  {
+    "id": 4,
+    "name": "Women's Running Shoes",
+    "category": "Clothing",
+    "price": 1299,
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&q=80",
+    "inStock": true,
+    "description": "Lightweight and durable running shoes for women."
+  },
+  {
+    "id": 5,
+    "name": "Python Programming Book",
+    "category": "Books",
+    "price": 850,
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=500&q=80",
+    "inStock": true,
+    "description": "Comprehensive guide to Python programming for beginners."
+  },
+  {
+    "id": 6,
+    "name": "Gaming Laptop 15-inch",
+    "category": "Electronics",
+    "price": 65000,
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1603302576837-37561b2e2302?w=500&q=80",
+    "inStock": false,
+    "description": "High-performance laptop for gaming and work."
+  },
+  {
+    "id": 7,
+    "name": "4K LED Monitor 27\"",
+    "category": "Electronics",
+    "price": 15999,
+    "rating": 4.4,
+    "image": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=500&q=80",
+    "inStock": true,
+    "description": "Crisp and clear display for professional use."
+  },
+  {
+    "id": 8,
+    "name": "Leather Wallet",
+    "category": "Accessories",
+    "price": 799,
+    "rating": 4.0,
+    "image": "https://images.unsplash.com/photo-1627123424574-181ce5171c98?w=500&q=80",
+    "inStock": true,
+    "description": "Genuine leather wallet with multiple card slots."
+  },
+  {
+    "id": 9,
+    "name": "Digital Camera",
+    "category": "Electronics",
+    "price": 35000,
+    "rating": 4.9,
+    "image": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=500&q=80",
+    "inStock": true,
+    "description": "Capture life's moments with stunning clarity."
+  },
+  {
+    "id": 10,
+    "name": "Coffee Maker",
+    "category": "Home & Kitchen",
+    "price": 2999,
+    "rating": 4.3,
+    "image": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=500&q=80",
+    "inStock": true,
+    "description": "Brew delicious coffee at home every morning."
+  },
+  {
+    "id": 11,
+    "name": "Backpack Water Resistant",
+    "category": "Accessories",
+    "price": 1499,
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=500&q=80",
+    "inStock": true,
+    "description": "Durable backpack suitable for travel and school."
+  },
+  {
+    "id": 12,
+    "name": "Wireless Mouse",
+    "category": "Electronics",
+    "price": 599,
+    "rating": 4.1,
+    "image": "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=500&q=80",
+    "inStock": true,
+    "description": "Ergonomic wireless mouse for productivity."
+  },
+  {
+    "id": 13,
+    "name": "Graphic T-Shirt",
+    "category": "Clothing",
+    "price": 599,
+    "rating": 3.9,
+    "image": "https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=500&q=80",
+    "inStock": true,
+    "description": "Stylish graphic tee with unique design."
+  },
+  {
+    "id": 14,
+    "name": "Denim Jeans",
+    "category": "Clothing",
+    "price": 1999,
+    "rating": 4.4,
+    "image": "https://images.unsplash.com/photo-1542272617-08f08630329f?w=500&q=80",
+    "inStock": true,
+    "description": "Classic denim jeans with a comfortable fit."
+  },
+  {
+    "id": 15,
+    "name": "Mechanical Keyboard",
+    "category": "Electronics",
+    "price": 3500,
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1587829741301-dc798b91add1?w=500&q=80",
+    "inStock": true,
+    "description": "Tactile mechanical keyboard for typing and gaming."
+  },
+  {
+    "id": 16,
+    "name": "Fitness Tracker Band",
+    "category": "Electronics",
+    "price": 1200,
+    "rating": 4.0,
+    "image": "https://images.unsplash.com/photo-1575311373937-040b8e1fd5b6?w=500&q=80",
+    "inStock": true,
+    "description": "Monitor your daily activity and sleep patterns."
+  },
+  {
+    "id": 17,
+    "name": "Sunglasses Aviator",
+    "category": "Accessories",
+    "price": 999,
+    "rating": 4.2,
+    "image": "https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=500&q=80",
+    "inStock": true,
+    "description": "Trendy aviator sunglasses with UV protection."
+  },
+  {
+    "id": 18,
+    "name": "Sci-Fi Novel",
+    "category": "Books",
+    "price": 450,
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=500&q=80",
+    "inStock": true,
+    "description": "Bestselling science fiction novel."
+  },
+  {
+    "id": 19,
+    "name": "Ceramic Mug",
+    "category": "Home & Kitchen",
+    "price": 250,
+    "rating": 4.1,
+    "image": "https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?w=500&q=80",
+    "inStock": true,
+    "description": "Beautiful ceramic mug for tea or coffee."
+  },
+  {
+    "id": 20,
+    "name": "Bluetooth Speaker",
+    "category": "Electronics",
+    "price": 1800,
+    "rating": 4.4,
+    "image": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=500&q=80",
+    "inStock": false,
+    "description": "Portable speaker with powerful bass."
+  }
+]
