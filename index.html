@@ -1,139 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wanderlust - Travel Blog</title>
+    <title>GO QUIZ - Hackathon Assessment</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Outfit:wght@500;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
 
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <a href="#" class="logo">Wanderlust</a>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#destinations">Destinations</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <header id="home" class="hero">
-        <div class="hero-content">
-            <h1>Explore the World</h1>
-            <p>Discover new places, cultures, and experiences.</p>
-            <a href="#destinations" class="btn">Start Your Journey</a>
-        </div>
-    </header>
-
-    <!-- Destinations Section -->
-    <section id="destinations" class="section">
-        <div class="container">
-            <h2 class="section-title">Popular Destinations</h2>
-            <div class="destinations-grid">
-                <div class="card">
-                    <img src="https://placehold.co/600x400?text=Paris" alt="Paris">
-                    <div class="card-content">
-                        <h3>Paris, France</h3>
-                        <p>Experience the city of love, art, and culture. Visit the Eiffel Tower and enjoy authentic
-                            croissants.</p>
+    <main class="app-container">
+        <!-- Section 1: Entry Form -->
+        <section id="entry-form-section" class="active">
+            <div class="glass-card">
+                <header class="logo-header">
+                    <h1 class="glow-text">GO QUIZ</h1>
+                    <p>Enter your details to begin the assessment</p>
+                </header>
+                <form id="registration-form">
+                    <div class="input-group">
+                        <label for="student-name">Full Name</label>
+                        <input type="text" id="student-name" placeholder="John Doe" required>
+                        <span class="error-msg" id="name-error"></span>
                     </div>
-                </div>
-                <div class="card">
-                    <img src="https://placehold.co/600x400?text=Kyoto" alt="Kyoto">
-                    <div class="card-content">
-                        <h3>Kyoto, Japan</h3>
-                        <p>Immerse yourself in history with ancient temples, traditional tea houses, and beautiful
-                            cherry blossoms.</p>
+                    <div class="input-group">
+                        <label for="roll-number">Roll Number</label>
+                        <input type="text" id="roll-number" placeholder="EG: 2021CSE001" required>
+                        <span class="error-msg" id="roll-error"></span>
                     </div>
-                </div>
-                <div class="card">
-                    <img src="https://placehold.co/600x400?text=Bali" alt="Bali">
-                    <div class="card-content">
-                        <h3>Bali, Indonesia</h3>
-                        <p>Relax on pristine beaches, explore lush rice terraces, and discover a vibrant spiritual
-                            culture.</p>
+                    <div class="input-group">
+                        <label for="institute">Institute</label>
+                        <input type="text" id="institute" placeholder="IIT Delhi" required>
+                        <span class="error-msg" id="institute-error"></span>
                     </div>
-                </div>
-                <div class="card">
-                    <img src="https://placehold.co/600x400?text=New+York" alt="New York">
-                    <div class="card-content">
-                        <h3>New York, USA</h3>
-                        <p>The city that never sleeps. Visit Times Square, Central Park, and enjoy world-class dining
-                            and entertainment.</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="https://placehold.co/600x400?text=Cape+Town" alt="Cape Town">
-                    <div class="card-content">
-                        <h3>Cape Town, South Africa</h3>
-                        <p>Discover the stunning Table Mountain, beautiful beaches, and rich history of this coastal
-                            city.</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="https://placehold.co/600x400?text=Rome" alt="Rome">
-                    <div class="card-content">
-                        <h3>Rome, Italy</h3>
-                        <p>Walk through history in the Eternal City. Visit the Colosseum, Vatican City, and enjoy
-                            authentic Italian pasta.</p>
-                    </div>
-                </div>
+                    <button type="submit" class="primary-btn">Start Quiz</button>
+                </form>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- About Section -->
-    <section id="about" class="section bg-light">
-        <div class="container">
-            <h2 class="section-title">About Us</h2>
-            <div class="about-content">
-                <p>Welcome to Wanderlust! We are passionate travelers dedicated to sharing our adventures and tips to
-                    help you plan your perfect getaway. Whether you're looking for a relaxing beach vacation or an
-                    adventurous mountain trek, we have something for everyone.</p>
+        <!-- Section 2: Quiz Interface -->
+        <section id="quiz-section">
+            <div class="quiz-container glass-card">
+                <header class="quiz-header">
+                    <div class="student-mini-info">
+                        <span id="display-name">Loading...</span>
+                        <span class="divider"></span>
+                        <span id="display-roll">Loading...</span>
+                    </div>
+                    <div class="timer-badge">
+                        <span class="timer-icon">⏱</span>
+                        <span id="timer">10:00</span>
+                    </div>
+                </header>
+
+                <div class="progress-container">
+                    <div id="progress-bar" class="progress-bar"></div>
+                </div>
+
+                <div class="question-card">
+                    <div class="question-header">
+                        <span class="q-number">Question <span id="q-current">1</span>/10</span>
+                    </div>
+                    <h2 id="question-text">Question content will appear here...</h2>
+                    <div id="options-container" class="options-grid">
+                        <!-- Options will be injected here -->
+                    </div>
+                </div>
+
+                <footer class="quiz-footer">
+                    <button id="prev-btn" class="secondary-btn" disabled>Previous</button>
+                    <button id="next-btn" class="primary-btn">Next</button>
+                    <button id="submit-btn" class="submit-btn hidden">Submit Quiz</button>
+                </footer>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-        <div class="container">
-            <h2 class="section-title">Contact Us</h2>
-            <form id="contactForm" class="contact-form">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-block">Send Message</button>
-            </form>
-        </div>
-    </section>
+        <!-- Section 3: Results Dashboard -->
+        <section id="results-section">
+            <div class="results-container glass-card">
+                <header class="results-header">
+                    <h1>Results Dashboard</h1>
+                    <p>Great job completing the assessment!</p>
+                </header>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2023 Wanderlust Travel Blog. All rights reserved.</p>
-        </div>
-    </footer>
+                <div class="results-summary">
+                    <div class="score-circle">
+                        <svg viewBox="0 0 36 36" class="circular-chart">
+                            <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                            <path id="score-circle-progress" class="circle" stroke-dasharray="0, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                            <text x="18" y="20.35" class="percentage" id="score-text">0/10</text>
+                        </svg>
+                    </div>
+                    <div class="details-grid">
+                        <div class="detail-item">
+                            <span class="label">Name:</span>
+                            <span id="res-name">--</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Roll No:</span>
+                            <span id="res-roll">--</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Institute:</span>
+                            <span id="res-inst">--</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Accuracy:</span>
+                            <span id="res-accuracy">0%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="breakdown-list">
+                    <h3>Question Breakdown</h3>
+                    <div id="question-list">
+                        <!-- Detailed breakdown injected here -->
+                    </div>
+                </div>
+
+                <button onclick="location.reload()" class="primary-btn">Retry Assessment</button>
+            </div>
+        </section>
+    </main>
 
     <script src="script.js"></script>
 </body>
-
 </html>
