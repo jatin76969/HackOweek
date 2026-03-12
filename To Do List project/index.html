@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be Productive | Premium Productivity</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Canvas Confetti -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="light-mode">
+    <div class="background-shape shape-1"></div>
+    <div class="background-shape shape-2"></div>
+
+    <div class="container">
+        <!-- Header Section -->
+        <header>
+            <div class="header-top">
+                <div class="date-time" id="current-date-time">
+                    <span id="display-date">Sunday, March 8</span>
+                    <span id="display-time">19:51</span>
+                </div>
+                <button id="theme-toggle" class="glass-button">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+            <div class="greeting-container">
+                <h1 id="greeting">Good Evening, Jatin!</h1>
+                <p id="sub-greeting">Let's be productive today.</p>
+            </div>
+
+            <!-- Statistics Bar -->
+            <div class="stats-container glass-card">
+                <div class="stat-item">
+                    <span class="stat-label">Total Tasks</span>
+                    <span class="stat-value" id="total-tasks">0</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-label">Completed</span>
+                    <span class="stat-value" id="completed-tasks">0</span>
+                </div>
+                <div class="progress-wrapper">
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" id="task-progress"></div>
+                    </div>
+                    <span id="progress-percent">0%</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Search and Filter Section -->
+        <section class="controls glass-card">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="search-input" placeholder="Search tasks...">
+            </div>
+            <div class="filter-options">
+                <select id="category-filter" class="glass-select">
+                    <option value="all">All Categories</option>
+                    <option value="Personal">Personal</option>
+                    <option value="Work">Work</option>
+                    <option value="Study">Study</option>
+                    <option value="Health">Health</option>
+                </select>
+            </div>
+        </section>
+
+        <!-- Input Section -->
+        <section class="task-input-section glass-card">
+            <div class="input-row">
+                <input type="text" id="task-input" placeholder="What needs to be done?">
+                <button id="add-task-btn" class="primary-btn">
+                    <i class="fas fa-plus"></i>
+                </button>
+            </div>
+            <div class="extra-inputs">
+                <div class="input-group">
+                    <label>Category</label>
+                    <div class="category-pills" id="category-selector">
+                        <button class="pill active" data-value="Personal">Personal</button>
+                        <button class="pill" data-value="Work">Work</button>
+                        <button class="pill" data-value="Study">Study</button>
+                        <button class="pill" data-value="Health">Health</button>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label>Priority</label>
+                    <div class="priority-pills" id="priority-selector">
+                        <button class="pill low" data-value="Low">Low</button>
+                        <button class="pill active medium" data-value="Medium">Medium</button>
+                        <button class="pill high" data-value="High">High</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Motivational Quote -->
+        <div class="quote-container" id="quote-box">
+            <p id="quote-text">"The secret of getting ahead is getting started."</p>
+        </div>
+
+        <!-- Task List Section -->
+        <main class="task-list-container">
+            <ul id="task-list">
+                <!-- Tasks will be injected here by JS -->
+            </ul>
+        </main>
+    </div>
+
+    <!-- Edit Task Modal -->
+    <div id="edit-modal" class="modal-overlay">
+        <div class="modal-content glass-card">
+            <h2>Edit Task</h2>
+            <input type="text" id="edit-task-input">
+            <div class="modal-actions">
+                <button id="cancel-edit" class="glass-button">Cancel</button>
+                <button id="save-edit" class="primary-btn">Save Changes</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
