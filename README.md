@@ -24,7 +24,5 @@ A travel-themed website with navigation and structured content layout.
 A basic concept project simulating a travel planning assistant.
 
 7. 🎯 Go Quiz Website
- 
-Add a live demo link if possible
 
 If you want, I can make this even more premium (like top GitHub profiles) with badges, icons, and animations 🔥
