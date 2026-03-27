@@ -25,4 +25,3 @@ A basic concept project simulating a travel planning assistant.
 
 7. 🎯 Go Quiz Website
 
-If you want, I can make this even more premium (like top GitHub profiles) with badges, icons, and animations 🔥
