@@ -25,3 +25,12 @@ A basic concept project simulating a travel planning assistant.
 
 7. 🎯 Go Quiz Website
 
+A Frontend + backend mixed project which handels data base through datafallbackjason
+
+8. Wheather Forecast
+
+A website which shows real time change in wheather of certain places as searched.(Api key use
+
+9. Photo Gallery
+
+A responsive nature photo gallery built with pure HTML, CSS & JavaScript — featuring Unsplash API, Masonry grid, live search, lightbox, and dark/light mode.
