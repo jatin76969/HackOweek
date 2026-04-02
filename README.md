@@ -29,7 +29,7 @@ A Frontend + backend mixed project which handels data base through datafallbackj
 
 8. Wheather Forecast
 
-A website which shows real time change in wheather of certain places as searched.(Api key use
+A website which shows real time change in wheather of certain places as searched.(Api key use)
 
 9. Photo Gallery
 
